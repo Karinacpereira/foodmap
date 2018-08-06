@@ -22,7 +22,6 @@ body {
 
 .splashscreen{
   width: 100%;
-  height: ;
   display: flex;
   justify-content: center;
 }
@@ -183,4 +182,3 @@ body {
   box-shadow: 3px 3px 5px #000000;
   border-radius: 10px;
 }
-  
