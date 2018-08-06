@@ -24,7 +24,7 @@
 
   <section class="home">
     <div class="top">
-      <h1 id="title" >Food Map</h1>
+      <h1 id="title">Food Map</h1>
     </div>
 
     <hr class="line">
@@ -38,21 +38,61 @@
     <h5 class="msg-info">Restaurantes próximos à você:</h5>
 
     <div class="search">
-      <div class="btn-group dropdown">
-        <button type="button" class="btn btn-default dropdown-toggle filtro" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filtrar Restaurantes<span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu">
-          <li class="type"><a href="#">Restaurante Árabe</a></li>
-          <li class="type"><a href="#">Fast Food</a></li>
-          <li class="type"><a href="#">Restaurante Italiano</a></li>
-          <li class="type"><a href="#">Restaurante Vegano</a></li>
-          <li class="type"><a href="#">Restaurante Japonês</a></li>
-        </ul>
+      <div class="btn-group btn-group-toggle filter1" data-toggle="buttons">
+        <label class="btn fixed">
+          <input type="radio" autocomplete="off" desabled>Tipo
+        </label>
+        <label class="btn choice arabe">
+          <input type="radio" name="options" id="option1" autocomplete="off">Árabe
+        </label>
+        <label class="btn choice  fast-food">
+          <input type="radio" name="options" id="option2" autocomplete="off">Fast Food
+        </label>
+        <label class="btn choice  italiano">
+          <input type="radio" name="options" id="option3" autocomplete="off">Italiano
+        </label>
+        <label class="btn choice  vegano">
+          <input type="radio" name="options" id="option4" autocomplete="off">Vegano
+        </label>
+        <label class="btn choice  japones">
+          <input type="radio" name="options" id="option5" autocomplete="off">Japonês
+        </label>
+      </div>
+      <div class="filter2">
+        <div class="input-group mb-3 input-search">
+          <input type="text" class="form-control" placeholder="Encontre o seu restaurante preferido (nome ou tipo)!" aria-label="Recipient's username" aria-describedby="button-addon2">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary filter" type="button" id="button-addon2">Pesquisar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="restaurants"></div>
+
+    <div class="modal fade" id="restaurantModal" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title name"></h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div id="image"></div>
+            <div class="description"></div>
+          </div>
+          <div class="modal-footer">
+            <button type="button1" class="btn btn-secondary" data-dismiss="modal">Leve-me até lá!</button>
+            <button type="button2" class="btn btn-primary">Fazer Pedido!</button>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-    <div class="images"></div>
+  
+    
 
     
 
@@ -61,10 +101,8 @@
     
 
     
-    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB4fJqMZ2bqk-T6yQofA_UzUuhDn56dS5U&amp;sensor=false"></script>
-    <!-- <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4fJqMZ2bqk-T6yQofA_UzUuhDn56dS5U&callback=initMap">
-    </script> -->
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB4fJqMZ2bqk-T6yQofA_UzUuhDn56dS5U&callback=initMap"></script>
+    <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"crossorigin="anonymous"></script>
