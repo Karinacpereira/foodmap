@@ -95,6 +95,7 @@ body {
   height: 300px;
   width: 80%;
   border: 1px solid #999999;
+  border-radius: 10px;
 }
 
 .line{
@@ -180,5 +181,6 @@ body {
   width: inherit;
   margin: 1%;
   box-shadow: 3px 3px 5px #000000;
+  border-radius: 10px;
 }
   
